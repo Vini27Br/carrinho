@@ -1,7 +1,18 @@
 import React from "react";
-import { Text } from "react-native/types";
+import { Image, StyleSheet  } from "react-native";
+import topo from '../../../assets/topo.png'
+
 
 export default function Carrinho() {
 
- return <Text>Carrinho de compras</Text>
+ return <Image source={ topo } style={estilos.topo}/>
+ 
 }
+
+const estilos = StyleSheet.create({
+
+    topo: {
+        width: "100%"
+    }
+
+})
