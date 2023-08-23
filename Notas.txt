@@ -1,1 +1,5 @@
 npm i -g expo-cli
+
+~~~~~~~~~~~{instalar fonts}
+
+expo install expo-font {fonte}

@@ -35,9 +35,8 @@ const estilos = StyleSheet.create({
         textAlign: "center",
         fontSize: 24,
         lineHeight: 26,
-        fontWeight: "bold",
         padding: 16,
-
+        fontFamily: "MontserratItalic"
     }
 
 })
