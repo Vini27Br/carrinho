@@ -1,24 +1,31 @@
 import React from "react"
-import { Text, View, Image, StyleSheet } from "react-native"
+import { Text, View, Image, StyleSheet, TouchableOpacity } from "react-native"
 import logo from "../../../../assets/logo.png"
 
+type Props ={
+  nome: string,
+  nomeFazenda: string,
+  descricao: string,
+  preco: string
+}
 
-export default function Detalhe() {
-    return (
-    <>
-        <View style={estilos.carrinho}>
-        <Text style={estilos.nome}>Carrinho de Compras</Text>
+export default function Detalhe({nome, nomeFazenda, descricao, preco}: Props) {
+    return<>
+        <Text style={estilos.nome}>{nome}</Text>
         <View style={estilos.fazenda}>
             <Image style={estilos.imagemFazenda} source={logo}/>
-            <Text style={estilos.nomeFazenda}>Fazenda do grande mestre Vinícius</Text>
+            <Text style={estilos.nomeFazenda}>{nomeFazenda}</Text>
         </View>
-    <Text> Carrinho de Compras </Text>   
-    <Text> Fazendinha do incrivel Vinícus </Text>   
-    <Text> Uma cesta com produtos selecionadas com cuidado e carinho</Text>   
-    <Text> R$ 40,00 </Text>   
- </View>
+
+    <Text> {descricao} </Text>   
+    <Text> {preco} </Text>   
+
+      <TouchableOpacity style={estilos.botao}> 
+        <Text style={estilos.textoBotao}> comprar </Text>
+      </TouchableOpacity>
+
     </>
-    )
+    
 }
 
 const estilos = StyleSheet.create({
@@ -59,5 +66,20 @@ const estilos = StyleSheet.create({
       color: "#2A9f85",
       marginTop: 8,
 
+    },
+
+    botao: {
+      marginTop: 16,
+      backgroundColor: "#2a9f85",
+      paddingVertical: 16,
+      borderRadius: 6
+    },
+    textoBotao: {
+      textAlign: "center",
+      color: "#fafafaf",
+      fontSize: 16,
+      lineHeight: 26,
+      fontFamily: "MontserratBold"
     }
+
 })

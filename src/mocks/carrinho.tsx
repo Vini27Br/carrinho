@@ -10,7 +10,7 @@ const carrinho = {
     },
     detalhes: {
         nome: "Carrinho de Compras",
-        nomeFazenda: "Etec Cidade do Livro",
+        nomeFazenda: "Fazenda do grande mestre Vinícius",
         descricao: "Uma cesta com produtos selecionados cuidadosamente da fazendo direto para a sua cozinha.",
         preco: "R$ 40,00",
         botao: "Comprar",
