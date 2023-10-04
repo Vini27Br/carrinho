@@ -1,28 +1,20 @@
 import React from "react";
 import { Image, StyleSheet, Text, View  } from "react-native";
 import logo from '../../../assets/logo.png';
+import carrinho from "../../mocks/carrinho";
 
-import Topo from '../components/Topo'
+import Topo from '../../pages/Carrinho/components/Topo'
 
+import Detalhe from "./components/Detalhe";
 
 
 
 export default function Carrinho() {
 
  return <>
- <Topo/>
+ <Topo titulo={carrinho.topo.titulo}/>
 
-   <View style={estilos.carrinho}>
-        <Text style={estilos.nome}>Carrinho de Compras</Text>
-        <View style={estilos.fazenda}>
-            <Image style={estilos.imagemFazenda} source={logo}/>
-            <Text style={estilos.nomeFazenda}>Fazenda do grande mestre Vinícius</Text>
-        </View>
-    <Text> Carrinho de Compras </Text>   
-    <Text> Fazendinha do incrivel Vinícus </Text>   
-    <Text> Uma cesta com produtos selecionadas com cuidado e carinho</Text>   
-    <Text> R$ 40,00 </Text>   
- </View>
+   <Detalhe/>
     </>
 
 }
